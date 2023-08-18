@@ -23,12 +23,12 @@ class MyApp extends StatelessWidget {
       title: 'Giphy Get Demo',
       theme: ThemeData(
           brightness: Brightness.light,
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.grey,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           useMaterial3: Provider.of<ThemeProvider>(context).material3),
       darkTheme: ThemeData(
           brightness: Brightness.dark,
-          primarySwatch: Colors.purple,
+          primarySwatch: Colors.grey,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           useMaterial3: Provider.of<ThemeProvider>(context).material3),
       localizationsDelegates: [
@@ -69,12 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
   // Random ID
   String randomId = "";
 
-  String giphyApiKey = const String.fromEnvironment("GIPHY_API_KEY");
+  String giphyApiKey = "OYXZOhGpDm6GVJIz8Y2iBqjnv2rNVNCr";
 
   @override
   void initState() {
     super.initState();
-
     WidgetsBinding.instance.addPostFrameCallback((_) {
       client.getRandomId().then((value) {
         setState(() {

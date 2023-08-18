@@ -44,15 +44,7 @@ class GiphyGet {
     String randomID = "",
     String searchText = "",
     String queryText = "",
-    bool modal = true,
-    bool showGIFs = true,
-    bool showStickers = true,
-    bool showEmojis = true,
-    Color? tabColor,
-    Color? textSelectedColor,
-    Color? textUnselectedColor,
     int debounceTimeInMilliseconds = 350,
-    TabTopBuilder? tapTopBuilder,
     TabBottomBuilder? tabBottomBuilder,
     SearchAppBarBuilder? searchAppBarBuilder,
   }) {
@@ -62,12 +54,11 @@ class GiphyGet {
 
     return showModalBottomSheet<GiphyGif>(
       clipBehavior: Clip.antiAlias,
-      shape: Theme.of(context).bottomSheetTheme.shape ??
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(
-              top: Radius.circular(10.0),
-            ),
-          ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(15.0),
+        ),
+      ),
       isScrollControlled: true,
       context: context,
       builder: (ctx) => MultiProvider(
@@ -85,11 +76,6 @@ class GiphyGet {
             create: (ctx) => TabProvider(
               apiKey: apiKey,
               randomID: randomID,
-              tabColor: tabColor ?? Theme.of(context).colorScheme.secondary,
-              textSelectedColor: textSelectedColor ??
-                  Theme.of(context).textTheme.titleSmall?.color,
-              textUnselectedColor: textUnselectedColor ??
-                  Theme.of(context).textTheme.bodySmall?.color,
               searchText: searchText,
               rating: rating,
               lang: lang,
@@ -98,10 +84,6 @@ class GiphyGet {
         ],
         child: SafeArea(
           child: MainView(
-            showGIFs: showGIFs,
-            showStickers: showStickers,
-            showEmojis: showEmojis,
-            tabTopBuilder: tapTopBuilder,
             tabBottomBuilder: tabBottomBuilder,
             searchAppBarBuilder: searchAppBarBuilder,
           ),

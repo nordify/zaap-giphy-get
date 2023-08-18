@@ -17,9 +17,7 @@ class GiphyTabBottom extends StatelessWidget {
 
   Widget _giphyLogo(BuildContext context) {
     const basePath = "assets/img/";
-    String logoPath = Theme.of(context).brightness == Brightness.light
-        ? "poweredby_dark.png"
-        : "poweredby_light.png";
+    String logoPath = "poweredby_light.png";
 
     return Container(
       width: double.maxFinite,

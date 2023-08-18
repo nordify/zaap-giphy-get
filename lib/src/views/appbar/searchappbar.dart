@@ -128,12 +128,17 @@ class _SearchAppBarState extends State<SearchAppBar> {
                             SheetProvider.maxExtent,
                         focusNode: _focus,
                         controller: _textEditingController,
+                        cursorColor: Color.fromRGBO(255, 141, 0, 1),
+                        cursorHeight: 18,
                         decoration: InputDecoration(
+                          contentPadding: EdgeInsets.all(9.5),
                           isDense: true,
                           filled: true,
-                          prefixIcon: _searchIcon(),
+                          prefixIcon: Icon(Icons.search),
                           hintText: l.searchInputLabel,
                           suffixIcon: IconButton(
+                              padding: EdgeInsets.zero,
+                              visualDensity: VisualDensity.compact,
                               icon: Icon(
                                 Icons.clear,
                                 color: Theme.of(context)
@@ -158,31 +163,6 @@ class _SearchAppBarState extends State<SearchAppBar> {
                 ),
       ],
     );
-  }
-
-  Widget _searchIcon() {
-    if (kIsWeb) {
-      return Icon(Icons.search);
-    } else {
-      return ShaderMask(
-        shaderCallback: (bounds) => LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [
-            Color(0xFFFF6666),
-            Color(0xFF9933FF),
-          ],
-        ).createShader(bounds),
-        child: Transform(
-          alignment: Alignment.center,
-          transform: Matrix4.rotationY(pi),
-          child: Icon(
-            Icons.search,
-            color: Colors.white,
-          ),
-        ),
-      );
-    }
   }
 
   void _focusListener() {

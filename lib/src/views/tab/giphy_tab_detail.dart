@@ -123,6 +123,7 @@ class _GiphyTabDetailState extends State<GiphyTabDetail> {
     }
 
     return MasonryGridView.count(
+      physics: BouncingScrollPhysics(),
       padding: EdgeInsets.symmetric(horizontal: 8.0),
       scrollDirection: _scrollDirection,
       controller: widget.scrollController,
