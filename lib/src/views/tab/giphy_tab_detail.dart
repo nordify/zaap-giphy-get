@@ -165,7 +165,7 @@ class _GiphyTabDetailState extends State<GiphyTabDetail> {
                             LoadState.loading: AspectRatio(
                               aspectRatio: _aspectRatio,
                               child: Container(
-                                color: Theme.of(context).cardColor,
+                                color: Color.fromRGBO(30, 30, 30, 1),
                               ),
                             ),
                             LoadState.completed: AspectRatio(
@@ -178,14 +178,14 @@ class _GiphyTabDetailState extends State<GiphyTabDetail> {
                             LoadState.failed: AspectRatio(
                               aspectRatio: _aspectRatio,
                               child: Container(
-                                color: Theme.of(context).cardColor,
+                                color: Color.fromRGBO(30, 30, 30, 1),
                               ),
                             ),
                           },
                           AspectRatio(
                             aspectRatio: _aspectRatio,
                             child: Container(
-                              color: Theme.of(context).cardColor,
+                              color: Color.fromRGBO(30, 30, 30, 1),
                             ),
                           ),
                         ),
@@ -225,14 +225,12 @@ class _GiphyTabDetailState extends State<GiphyTabDetail> {
         _collection = await client.search(_appBarProvider.queryText,
             lang: _tabProvider.lang,
             offset: offset,
-            rating: _tabProvider.rating,
             type: widget.type,
             limit: _limit);
       } else {
         _collection = await client.trending(
             lang: _tabProvider.lang,
             offset: offset,
-            rating: _tabProvider.rating,
             type: widget.type,
             limit: _limit);
       }

@@ -64,22 +64,25 @@ class _MainViewState extends State<MainView>
         return _bottomSheetBody();
       });
 
-  Widget _bottomSheetBody() => Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          GiphyTabTop(),
-          SearchAppBar(
-            scrollController: this._scrollController,
-            searchAppBarBuilder: widget.searchAppBarBuilder,
-          ),
-          Expanded(
-            child: GiphyTabDetail(
-              type: GiphyType.gifs,
+  Widget _bottomSheetBody() => Container(
+        color: Color.fromRGBO(40, 40, 40, 1),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            GiphyTabTop(),
+            SearchAppBar(
               scrollController: this._scrollController,
-              key: null,
+              searchAppBarBuilder: widget.searchAppBarBuilder,
             ),
-          ),
-          widget.tabBottomBuilder?.call(context) ?? GiphyTabBottom(),
-        ],
+            Expanded(
+              child: GiphyTabDetail(
+                type: GiphyType.gifs,
+                scrollController: this._scrollController,
+                key: null,
+              ),
+            ),
+            widget.tabBottomBuilder?.call(context) ?? GiphyTabBottom(),
+          ],
+        ),
       );
 }

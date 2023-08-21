@@ -1,6 +1,3 @@
-import 'dart:math';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:giphy_get/giphy_get.dart';
 import 'package:giphy_get/src/l10n/l10n.dart';
@@ -131,6 +128,7 @@ class _SearchAppBarState extends State<SearchAppBar> {
                         cursorColor: Color.fromRGBO(255, 141, 0, 1),
                         cursorHeight: 18,
                         decoration: InputDecoration(
+                          fillColor: Color.fromRGBO(60, 60, 60, 1),
                           contentPadding: EdgeInsets.all(9.5),
                           isDense: true,
                           filled: true,
@@ -141,10 +139,7 @@ class _SearchAppBarState extends State<SearchAppBar> {
                               visualDensity: VisualDensity.compact,
                               icon: Icon(
                                 Icons.clear,
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyLarge!
-                                    .color!,
+                                color: Colors.white,
                               ),
                               onPressed: () {
                                 setState(() {

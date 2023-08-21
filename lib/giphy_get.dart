@@ -4,7 +4,6 @@ library giphy_get;
 import 'package:flutter/material.dart';
 import 'package:giphy_get/src/client/models/gif.dart';
 import 'package:giphy_get/src/client/models/languages.dart';
-import 'package:giphy_get/src/client/models/rating.dart';
 import 'package:giphy_get/src/providers/app_bar_provider.dart';
 import 'package:giphy_get/src/providers/sheet_provider.dart';
 import 'package:giphy_get/src/providers/tab_provider.dart';
@@ -52,7 +51,9 @@ class GiphyGet {
     }
 
     return showModalBottomSheet<GiphyGif>(
+      elevation: 0,
       clipBehavior: Clip.antiAlias,
+      backgroundColor: Color.fromRGBO(40, 40, 40, 1),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(15.0),
