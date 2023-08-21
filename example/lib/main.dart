@@ -162,9 +162,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   giphyGetWrapper.getGif(
                     '',
                     context,
-                    showGIFs: true,
-                    showStickers: true,
-                    showEmojis: true,
                   );
                 },
                 tooltip: 'Open Sticker',

@@ -31,4 +31,7 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/img/
+    - assets/img/GIPHY_dark.png
+    - assets/img/GIPHY_light.png
+    - assets/img/poweredby_dark.png
+    - assets/img/poweredby_light.png

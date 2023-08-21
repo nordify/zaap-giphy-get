@@ -25,13 +25,7 @@ class GiphyGetWrapper extends StatelessWidget {
     return builder(streamController.stream, this);
   }
 
-  getGif(
-    String queryText,
-    BuildContext context, {
-    bool showGIFs = true,
-    bool showStickers = true,
-    bool showEmojis = true,
-  }) async {
+  getGif(String queryText, BuildContext context) async {
     GiphyGif? gif = await GiphyGet.getGif(
       queryText: queryText,
       context: context,

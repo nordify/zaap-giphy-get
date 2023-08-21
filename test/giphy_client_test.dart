@@ -77,7 +77,7 @@ Future<void> main() async {
 
       // Gif Validation
       final gif = (await client.trending()).data.first;
-      expect(gif.rating, GiphyRating.g);
+      expect(gif.rating, GiphyRating.r);
       expect(gif.type, 'gif');
     
     });
