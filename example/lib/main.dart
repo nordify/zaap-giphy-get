@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
   // Random ID
   String randomId = "";
 
-  String giphyApiKey = "OYXZOhGpDm6GVJIz8Y2iBqjnv2rNVNCr";
+  String giphyApiKey = "API_KEY";
 
   @override
   void initState() {
