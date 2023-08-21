@@ -24,7 +24,6 @@ class GiphyClient {
   Future<GiphyCollection> trending({
     int offset = 0,
     int limit = 30,
-    String rating = GiphyRating.r,
     String lang = GiphyLanguage.english,
     String type = GiphyType.gifs,
   }) async {
@@ -34,7 +33,6 @@ class GiphyClient {
         queryParameters: <String, String>{
           'offset': '$offset',
           'limit': '$limit',
-          'rating': rating,
           'lang': lang
         },
       ),
@@ -45,7 +43,6 @@ class GiphyClient {
     String query, {
     int offset = 0,
     int limit = 30,
-    String rating = GiphyRating.r,
     String lang = GiphyLanguage.english,
     String type = GiphyType.gifs,
   }) async {
@@ -56,7 +53,6 @@ class GiphyClient {
           'q': query,
           'offset': '$offset',
           'limit': '$limit',
-          'rating': rating,
           'lang': lang,
         },
       ),
@@ -66,7 +62,6 @@ class GiphyClient {
   Future<GiphyCollection> emojis({
     int offset = 0,
     int limit = 30,
-    String rating = GiphyRating.r,
     String lang = GiphyLanguage.english,
   }) async {
     return _fetchCollection(
@@ -75,7 +70,6 @@ class GiphyClient {
         queryParameters: <String, String>{
           'offset': '$offset',
           'limit': '$limit',
-          'rating': rating,
           'lang': lang,
           
         },
@@ -85,7 +79,6 @@ class GiphyClient {
 
   Future<GiphyGif> random({
     required String tag,
-    String rating = GiphyRating.r,
     String type = GiphyType.gifs,
   }) async {
     return _fetchGif(
@@ -93,7 +86,6 @@ class GiphyClient {
         path: '$_apiVersion/$type/random',
         queryParameters: <String, String>{
           'tag': tag,
-          'rating': rating,
         },
       ),
     );

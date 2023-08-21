@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import 'package:giphy_get/src/client/models/languages.dart';
-import 'package:giphy_get/src/client/models/rating.dart';
 
 class TabProvider with ChangeNotifier {
   String apiKey;
@@ -8,7 +7,6 @@ class TabProvider with ChangeNotifier {
   Color? textSelectedColor;
   Color? textUnselectedColor;
   String? searchText;
-  String rating = GiphyRating.r;
   String lang = GiphyLanguage.english;
   String randomID = "";
 
@@ -25,7 +23,6 @@ class TabProvider with ChangeNotifier {
     this.textSelectedColor,
     this.textUnselectedColor,
     this.searchText,
-    required this.rating,
     required this.randomID,
     required this.lang,
   });

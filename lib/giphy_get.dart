@@ -39,7 +39,6 @@ class GiphyGet {
   static Future<GiphyGif?> getGif({
     required BuildContext context,
     required String apiKey,
-    String rating = GiphyRating.r,
     String lang = GiphyLanguage.english,
     String randomID = "",
     String searchText = "",
@@ -77,7 +76,6 @@ class GiphyGet {
               apiKey: apiKey,
               randomID: randomID,
               searchText: searchText,
-              rating: rating,
               lang: lang,
             ),
           )
