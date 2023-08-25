@@ -146,11 +146,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   currentGif != null
                       ? SizedBox(
                           child: GiphyGifWidget(
-                            imageAlignment: Alignment.center,
                             gif: currentGif!,
                             giphyGetWrapper: giphyGetWrapper,
-                            borderRadius: BorderRadius.circular(30),
-                            showGiphyLabel: true,
                           ),
                         )
                       : const Text("No GIF")
