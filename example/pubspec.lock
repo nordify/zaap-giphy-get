@@ -52,10 +52,11 @@ packages:
   extended_image:
     dependency: transitive
     description:
-      name: extended_image
-      sha256: e77d18f956649ba6e5ecebd0cb68542120886336a75ee673788145bd4c3f0767
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: d17f9782f567b3d1897681f584c0f0232d8093f5
+      url: "https://github.com/nordify/zaap_extended_image.git"
+    source: git
     version: "8.0.2"
   extended_image_library:
     dependency: transitive

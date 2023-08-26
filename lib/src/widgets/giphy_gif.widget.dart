@@ -34,6 +34,7 @@ class _GiphyGifWidgetState extends State<GiphyGifWidget> {
               widget.onLongPress?.call(widget.gif, widget.giphyGetWrapper);
             },
             child: ExtendedImage.network(
+              
               widget.gif.images!.fixedWidth.url,
             ),
           ),

@@ -1,6 +1,7 @@
 name: giphy_get
 description: Pick EMOJI,STICKER or GIF from Giphy in pure dart code. Support Android,iOS,Web and Desktop.
 version: 3.5.0
+publish_to: none
 homepage: https://github.com/bazookon/giphy_get
 
 environment:
@@ -13,8 +14,10 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  extended_image:
+    git: https://github.com/nordify/zaap_extended_image.git
+
   provider: ^6.0.5
-  extended_image: ^8.0.2
   flutter_staggered_grid_view: ^0.7.0
   meta: ^1.9.1
   http: ^0.13.5

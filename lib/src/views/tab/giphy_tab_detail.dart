@@ -118,7 +118,7 @@ class _GiphyTabDetailState extends State<GiphyTabDetail> {
   Widget build(BuildContext context) {
     if (_list.isEmpty) {
       return Center(
-        child: CircularProgressIndicator(),
+        child: CircularProgressIndicator.adaptive(),
       );
     }
 
