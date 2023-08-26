@@ -126,7 +126,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: f7f2347c11244d63e74759465438d77e6f08eee9
+      resolved-ref: "5ff7ea84793778c23b54e19d374cf7f7c5dc1596"
       url: "https://github.com/nordify/zaap_extended_image.git"
     source: git
     version: "8.0.2"
