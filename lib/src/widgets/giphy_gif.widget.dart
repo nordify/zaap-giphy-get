@@ -34,8 +34,8 @@ class _GiphyGifWidgetState extends State<GiphyGifWidget> {
               widget.onLongPress?.call(widget.gif, widget.giphyGetWrapper);
             },
             child: ExtendedImage.network(
-              
               widget.gif.images!.fixedWidth.url,
+              loadingColor: Color.fromRGBO(30, 30, 30, 1),
             ),
           ),
         ],
