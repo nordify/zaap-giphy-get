@@ -36,6 +36,8 @@ class _GiphyGifWidgetState extends State<GiphyGifWidget> {
             child: ExtendedImage.network(
               widget.gif.images!.fixedWidth.url,
               loadingColor: Color.fromRGBO(30, 30, 30, 1),
+              width: double.parse(widget.gif.images!.fixedWidth.width),
+              height: double.parse(widget.gif.images!.fixedWidth.height),
             ),
           ),
         ],
